@@ -1,7 +1,7 @@
-from dotenv import load_dotenv
+from dotenv import load_dotenv # type: ignore
 import os
-from langchain_google_genai import ChatGoogleGenerativeAI
-import gradio as gr
+from langchain_google_genai import ChatGoogleGenerativeAI # type: ignore
+import gradio as gr # type: ignore
 
 load_dotenv()
 gemini_key = os.getenv("GEMINI_API_KEY")
@@ -69,4 +69,4 @@ demo = gr.ChatInterface(
 )
 
 if __name__ == "__main__":
-    demo.launch(share=True)
+    demo.launch()
